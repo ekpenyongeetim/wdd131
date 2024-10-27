@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-/* Global Styles */
 body {
   font-family: "Roboto", sans-serif;
   color: #333;
@@ -104,22 +103,18 @@ footer p {
 }
 
 @media (max-width: 700px) {
-  /* Reduce padding for smaller screens */
   body {
     padding: 10px;
   }
 
-  /* Stack main sections vertically */
   main {
     grid-template-columns: 1fr;
   }
 
-  /* Make header text smaller and adjust padding */
   header h1 {
     font-size: 1.4em;
   }
 
-  /* Stack navigation links vertically with lines between each item */
   nav ul {
     flex-direction: column;
   }
@@ -129,7 +124,7 @@ footer p {
   }
 
   nav ul li:not(:last-child) {
-    border-bottom: 1px solid #ddd; /* Divider line between items */
+    border-bottom: 1px solid #ddd;
   }
 
   nav ul li a {
