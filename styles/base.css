@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background-color: #245478;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.8em;
+}
+
+header span {
+  color: #ffd700;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  margin-top: 10px;
+  background-color: #333;
+  padding: 10px 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #ffd700;
+  text-decoration: underline;
+}
+
+/* Main Layout */
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Card Style */
+.card {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  background-color: #245478;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+.hero-pic {
+  text-align: center;
+}
+
+.hero-pic img {
+  border-radius: 50%;
+}
+
+.card .hero-links {
+  padding: 2rem;
+}
+
+/* Footer */
+footer {
+  background-color: #245478;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+@media (max-width: 700px) {
+  /* Reduce padding for smaller screens */
+  body {
+    padding: 10px;
+  }
+
+  /* Stack main sections vertically */
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  /* Make header text smaller and adjust padding */
+  header h1 {
+    font-size: 1.4em;
+  }
+
+  /* Stack navigation links vertically with lines between each item */
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  nav ul li:not(:last-child) {
+    border-bottom: 1px solid #ddd; /* Divider line between items */
+  }
+
+  nav ul li a {
+    padding: 10px 0;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  nav ul li a:hover {
+    color: #ffd700;
+  }
+
+  /* Card Styling for Mobile */
+  .card {
+    padding: 15px;
+  }
+
+  /* Footer text size and padding adjustment */
+  footer {
+    padding: 10px;
+    font-size: 0.9em;
+  }
+}

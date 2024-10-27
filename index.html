@@ -3,10 +3,88 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Testing - Ekpenyong</title>
+    <title>WDD 131 - Dynamic Web Fundamentals - Ekpenyong E. E.</title>
+    <meta
+      name="description"
+      content="WDD 131 - Dynamic Web Fundamentals, Ekpenyong E. Etim, portfolio and resources"
+    />
+    <meta name="author" content="Ekpenyong E. Etim" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="scripts/getdates.js" defer></script>
   </head>
   <body>
-    <h1>Testing this file</h1>
-    <p>Nothing to see here</p>
+    <header>
+      <h1>
+        WDD 131: Dynamic Web Fundamentals - <span>Ekpenyong E. Etim</span>
+      </h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com/in/ekpenyongeetim" target="_blank"
+              >LinkedIn</a
+            >
+          </li>
+          <li>
+            <a href="https://byui.instructure.com/" target="_blank">I-Learn</a>
+          </li>
+          <li>
+            <a
+              href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng&id=p27#p27"
+              target="_blank"
+              >Scripture</a
+            >
+          </li>
+          <li><a href="#" target="_blank">Final Project</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- About Me Section -->
+      <section class="card">
+        <h2>About Me</h2>
+        <figure class="hero-pic">
+          <img
+            src="images/Ekpenyong-Etim-headshot.webp"
+            alt="Profile picture of Ekpenyong Etim"
+            width="150"
+          />
+        </figure>
+        <p>
+          Hello! I’m Ekpenyong E. Etim, but most people just call me Etim. Born
+          and raised in Cross River State, Nigeria, I still call this beautiful
+          place home, where I live with my family. Currently, I work as a Web
+          Developer for Kodachi Digital, an up-and-coming digital marketing
+          agency. Family means everything to me, and my children are my greatest
+          joy. Outside of work, I have a passion for travel and discovering new
+          things, always looking for opportunities to grow and learn.
+        </p>
+      </section>
+
+      <!-- Web Dev Resources Section -->
+      <section class="card">
+        <h2>Web Dev Resources</h2>
+        <ul class="hero-links">
+          <li><a href="#">Dev.to Community</a></li>
+          <li><a href="#">Smashing Magazine</a></li>
+          <li><a href="#">CSS Tricks</a></li>
+          <li><a href="#">W3 Schools</a></li>
+          <li><a href="#">Udemy</a></li>
+          <li><a href="#">Lorem Picsum Image Placeholder</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        &copy; <span id="currentyear"></span> 🌸 Ekpenyong E. Etim 🌸 Nigeria
+      </p>
+      <p id="lastModified"></p>
+    </footer>
   </body>
 </html>
