@@ -1,0 +1,38 @@
+@media (min-width: 600px) {
+  /* Hide the hamburger menu button on larger screens */
+  #menu {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .navigation {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .navigation a {
+    display: block;
+    padding: 1rem 2rem;
+  }
+
+  main {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+    gap: 1.5rem;
+  }
+}
