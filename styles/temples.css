@@ -14,7 +14,7 @@ header {
   align-items: center;
   justify-content: space-evenly;
   padding: 1rem;
-  background-color: #333;
+  background-color: #b30052;
   color: white;
 }
 
@@ -37,13 +37,13 @@ h1 {
 }
 
 #menu.open::before {
-  content: "❌";
+  content: "❎";
 }
 
 .navigation {
   display: flex;
   flex-direction: column;
-  background-color: #444;
+  background-color: #660030;
   width: 100%;
 }
 
@@ -51,12 +51,13 @@ h1 {
   display: none;
   padding: 1rem;
   text-align: center;
-  color: white;
+  color: #fff;
   text-decoration: none;
 }
 
 .navigation a:hover {
-  background-color: #555;
+  background-color: #4d0024;
+  border: 1px solid #fff;
 }
 
 .open a {
@@ -68,10 +69,20 @@ main {
   text-align: center;
 }
 
+main h2 {
+  margin-bottom: 10px;
+  color: #8c0041;
+}
+
 .gallery {
   display: grid;
-  grid-template-columns: 1fr;
   gap: 1rem;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* Automatically adjusts to fit 1, 2, or 3 columns */
+  max-width: 1000px;
+  margin: 0 auto; /* Center align for larger screens */
 }
 
 figure {
@@ -83,7 +94,7 @@ figure img {
 }
 
 figcaption {
-  color: #4a006e; /* Dark purple */
+  color: #8c0041; /* Dark purple */
   margin-top: 0.5rem;
   font-size: 1rem;
   font-weight: bold;
@@ -91,7 +102,7 @@ figcaption {
 
 footer {
   padding: 1rem;
-  background-color: #222;
+  background-color: #8c0041;
   color: white;
   text-align: center;
 }
