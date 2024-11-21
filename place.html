@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD 131 - Dynamic Web Fundamentals - Ekpenyong E. Etim</title>
+    <meta
+      name="description"
+      content="Explore Ekpenyong E. Etim's portfolio for WDD 131, featuring web development resources, projects, and professional highlights."
+    />
+    <meta name="author" content="Ekpenyong E. Etim" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/place.css" />
+    <script src="scripts/getdates.js" defer></script>
+  </head>
+  <body>
+    <header>
+        <h1>Place Name</h1>
+    </header>
+
+    <main>
+        <section class="hero">
+            <picture>
+                <source srcset="images/hero-large.webp" media="(min-width: 768px)">
+                <img src="images/hero-small.webp" alt="Hero Image">
+            </picture>
+        </section>
+
+        <section class="weather">
+            <h2>Weather <span class="icon">⛅</span></h2>
+            <p>Temperature: <span id="temp">-</span>°F</p>
+            <p>Wind Speed: <span id="wind-speed">-</span> mph</p>
+            <p>Wind Chill: <span id="wind-chill">N/A</span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+          &copy; <span id="currentyear"></span> ⭐ Ekpenyong E. Etim ⭐ Nigeria
+        </p>
+        <p id="lastModified"></p>
+      </footer>
+</body>
+    
+  </body>
+</html>
