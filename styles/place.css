@@ -1,72 +1,125 @@
-:root {
-  --primary-color: #f3752b; /* Base color */
-  --primary-dark: #c95e23; /* Darker shade */
-  --primary-light: #ffa567; /* Lighter shade */
-  --background-color: #fff7f3; /* Very light background */
-  --text-color: #333; /* Neutral text color */
-  --font-family: "Arial", sans-serif;
-}
-
+/* General Styles */
 body {
-  font-family: var(--font-family);
+  font-family: Arial, sans-serif;
   margin: 0;
-  color: var(--text-color);
-  background: var(--background-color);
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #fff;
 }
 
-/* Header and Footer Styling */
-header,
-footer {
-  background: var(--primary-color);
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-}
-
-header {
-  box-shadow: 0 4px 6px var(--primary-dark);
-}
-
-/* Hero Section */
-.hero img {
+.container {
   width: 100%;
-  height: auto;
-  border-bottom: 5px solid var(--primary-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Weather Section */
-.weather {
-  background: var(--primary-light);
-  padding: 1.5rem;
-  margin: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px var(--primary-dark);
+.header {
+  background-color: #002654; /* Dark blue for Paris */
+  color: #fff;
+  width: 100%;
   text-align: center;
+  padding: 20px 0;
 }
 
-.weather h2 {
-  color: var(--primary-dark);
-  margin-bottom: 1rem;
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin: 20px;
+  max-width: 800px;
 }
 
-.icon::after {
-  content: "🌤"; /* Weather Icon */
-  font-size: 1.5rem;
-  margin-left: 0.5rem;
+.image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.data,
+.weather {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.data ul,
+.weather ul {
+  list-style: none;
+  padding: 0;
+}
+
+.data li,
+.weather li {
+  margin-bottom: 10px;
 }
 
 /* Footer */
-footer {
-  font-size: 0.9rem;
-  box-shadow: 0 -2px 6px var(--primary-dark);
+.footer {
+  background-color: #002654;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 14px;
 }
 
-/* Responsive Design for Larger Screens */
-@media (min-width: 768px) {
+/* Large Screen Background Image for the Louvre */
+@media screen and (min-width: 768px) {
+  .content {
+    max-width: 1200px;
+    justify-content: space-between;
+  }
+
+  .content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3; /* Optional: Add transparency */
+  }
+
+  .data,
   .weather {
+    width: 25%;
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.8
+    ); /* Slight transparency for readability */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+  }
+
+  .data {
+    position: absolute;
+    top: 2rem;
+    left: 1.5rem;
+  }
+
+  .weather {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 2rem;
+  }
+  .image {
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    text-align: left;
+    overflow: hidden; /* Ensures no extra spacing */
+  }
+
+  .image img {
+    width: 100%; /* Scale image to the full width */
+    height: 100%; /* Scale image to the full height */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
   }
 }

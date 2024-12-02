@@ -12,31 +12,25 @@ document.getElementById("lastModified").textContent =
 document.getElementById("current-year").textContent = new Date().getFullYear();
 document.getElementById("last-modified").textContent = document.lastModified;
 
-// Static values for temperature and wind speed
-const temperature = 30; // Fahrenheit
-const windSpeed = 10; // mph
+// Weather: Wind chill calculation
+const temperature = 12; // Static value in Celsius
+const windSpeed = 10; // Static value in km/h
 
-// Calculate Wind Chill
 function calculateWindChill(temp, speed) {
-  return (
-    35.74 +
-    0.6215 * temp -
-    35.75 * Math.pow(speed, 0.16) +
-    0.4275 * temp * Math.pow(speed, 0.16)
-  );
-}
-
-// Update weather data
-function updateWeather() {
-  document.getElementById("temp").textContent = temperature;
-  document.getElementById("wind-speed").textContent = windSpeed;
-
-  if (temperature <= 50 && windSpeed > 3) {
-    const windChill = calculateWindChill(temperature, windSpeed).toFixed(1);
-    document.getElementById("wind-chill").textContent = windChill;
-  } else {
-    document.getElementById("wind-chill").textContent = "N/A";
+  if (temp <= 10 && speed > 4.8) {
+    return (
+      (
+        13.12 +
+        0.6215 * temp -
+        11.37 * Math.pow(speed, 0.16) +
+        0.3965 * temp * Math.pow(speed, 0.16)
+      ).toFixed(1) + "°C"
+    );
   }
+  return "N/A";
 }
 
-updateWeather();
+document.getElementById("wind-chill").textContent = calculateWindChill(
+  temperature,
+  windSpeed
+);
