@@ -13,8 +13,8 @@ document.getElementById("current-year").textContent = new Date().getFullYear();
 document.getElementById("last-modified").textContent = document.lastModified;
 
 // Weather: Wind chill calculation
-const temperature = 12; // Static value in Celsius
-const windSpeed = 10; // Static value in km/h
+const temperature = 12;
+const windSpeed = 10;
 
 function calculateWindChill(temp, speed) {
   if (temp <= 10 && speed > 4.8) {

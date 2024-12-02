@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Places</title>
-    <link rel="stylesheet" href="styles/place.css">
+    <meta
+      name="description"
+      content="Explore the beauty and culture of Paris, including its landmarks, data, and weather details."
+    />
+    <meta name="author" content="Ekpenyong E. Etim" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/place.css" />
     <script src="scripts/getdates.js" defer></script>
   </head>
   <body>
     <div class="container">
-      <div class="header">
+      <header class="header">
         <h1>Paris</h1>
-      </div>
+      </header>
       <div class="content">
         <picture class="image">
           <source
@@ -19,13 +31,13 @@
             srcset="images/louvre-1200.webp"
             width="1200"
             height="800"
-          >
+          />
           <img
             src="images/eifle-600.webp"
             alt="Paris Eifle Tower"
             width="600"
             height="900"
-          >
+          />
         </picture>
         <div class="data">
           <h2>Data</h2>
@@ -50,6 +62,12 @@
         </div>
         <div class="weather">
           <h2>Weather</h2>
+          <img
+            src="images/weather-icon.svg"
+            alt="Partly Cloudy Weather"
+            class="weather-icon"
+          />
+
           <div class="weather-grid">
             <div><strong>Temperature:</strong></div>
             <div>12°C</div>
@@ -61,12 +79,13 @@
             <div>10.5°C</div>
           </div>
         </div>
+      </div>
+      <footer class="footer">
+        <p>
+          &copy; <span id="currentyear"></span> ⭐ Ekpenyong E. Etim ⭐ Nigeria
+        </p>
+        <p id="lastModified"></p>
+      </footer>
     </div>
-    <footer class="footer">
-      <p>
-        &copy; <span id="currentyear"></span> ⭐ Ekpenyong E. Etim ⭐ Nigeria
-      </p>
-      <p id="lastModified"></p>
-    </footer>
   </body>
 </html>
