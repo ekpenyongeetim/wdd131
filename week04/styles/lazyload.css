@@ -1,0 +1,53 @@
+/* General Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  text-align: center;
+}
+
+/* Header Styling */
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* Main Styling */
+main {
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+img {
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeIn 10s ease-in-out forwards;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
