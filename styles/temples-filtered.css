@@ -1,0 +1,139 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #b30052;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+#menu {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+#menu::before {
+  content: "☰";
+}
+
+#menu.open::before {
+  content: "❎";
+}
+
+.navigation {
+  display: none;
+  flex-direction: column;
+  background-color: #660030;
+}
+
+/* Show navigation when the .open class is added */
+.open .navigation {
+  display: flex;
+}
+
+.navigation a {
+  color: #fff;
+  padding: 1rem;
+  text-decoration: none;
+  text-align: center;
+}
+
+.navigation a:hover {
+  background-color: #4d0024;
+}
+
+.open {
+  display: flex;
+}
+
+main {
+  padding: 1rem;
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin: 0 auto;
+}
+
+.temple-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.temple-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.temple-card h3 {
+  color: #8c0041;
+}
+
+.temple-card p {
+  margin: 5px 0;
+}
+
+/* Footer */
+footer {
+  background-color: #8c0041;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Media Query for Larger Screens */
+@media (min-width: 700px) {
+  #menu {
+    display: none;
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navigation {
+    display: flex; /* Always show navigation on large screens */
+    flex-direction: row;
+    justify-content: center;
+    background-color: transparent;
+  }
+
+  .navigation a {
+    display: block;
+    padding: 1rem 2rem;
+    color: white;
+    text-decoration: none;
+  }
+
+  .navigation a:hover {
+    background-color: #4d0024;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
