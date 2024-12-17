@@ -1,14 +1,3 @@
-// Increment counter using localStorage
-if (localStorage.getItem("reviewCount")) {
-  let count = parseInt(localStorage.getItem("reviewCount"));
-  count++;
-  localStorage.setItem("reviewCount", count);
-  document.getElementById("reviewCount").textContent = count;
-} else {
-  localStorage.setItem("reviewCount", 1);
-  document.getElementById("reviewCount").textContent = 1;
-}
-
 // Product Array
 const products = [
   { id: "fc-1888", name: "Flux Capacitor", averagerating: 4.5 },
@@ -18,12 +7,23 @@ const products = [
   { id: "jj-1969", name: "Warp Equalizer", averagerating: 5.0 },
 ];
 
-// Dynamically populate product options
-const productSelect = document.getElementById("product");
+document.addEventListener("DOMContentLoaded", () => {
+  // Dynamically populate product options
+  const productSelect = document.getElementById("product");
 
-products.forEach((product) => {
-  const option = document.createElement("option");
-  option.value = product.id;
-  option.textContent = product.name;
-  productSelect.appendChild(option);
+  products.forEach((product) => {
+    const option = document.createElement("option");
+    option.value = product.id;
+    option.textContent = product.name;
+    productSelect.appendChild(option);
+  });
+
+  // Increment and display review count using localStorage
+  const reviewCountElement = document.getElementById("reviewCount");
+  if (reviewCountElement) {
+    let count = parseInt(localStorage.getItem("reviewCount") || "0");
+    count++;
+    localStorage.setItem("reviewCount", count);
+    reviewCountElement.textContent = count;
+  }
 });

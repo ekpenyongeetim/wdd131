@@ -34,6 +34,10 @@ form legend {
   font-weight: bold;
 }
 
+.required {
+  color: red;
+}
+
 input,
 select,
 textarea {
@@ -42,6 +46,12 @@ textarea {
   margin-top: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #28a745;
 }
 
 fieldset {
