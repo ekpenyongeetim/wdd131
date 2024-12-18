@@ -4,18 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Review Confirmation</title>
-    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="styles/review.css" />
     <script src="scripts/form.js" defer></script>
   </head>
   </head>
   <body>
     <div class="container">
-      <h1>Thank You for Your Review!</h1>
-      <p>Your review has been submitted successfully.</p>
-      <p>
-        <strong>Total Reviews Submitted:</strong>
-        <span id="reviewCount">0</span>
-      </p>
+      <div class="thank-you">
+        <h1>🎉 Thank You! 🎉</h1>
+        <p>Your review has been successfully submitted.</p>
+      </div>
+
+      <div class="counter">
+        <p>Total Reviews Submitted:</p>
+        <div id="reviewCount" class="count-display"></div>
+      </div>
+      <p><span class="label">Number of Visits: </span><span class="visits"></span></p>
+      <p>Timestamp upon page load: <span class="today"></span> in milliseconds.</p>
+
+      <div class="return">
+        <p>Would you like to submit another review?</p>
+        <a href="form.html" class="button">Submit Another Review</a>
+      </div>
     </div>
   </body>
 </html>
