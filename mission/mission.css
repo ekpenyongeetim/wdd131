@@ -1,0 +1,121 @@
+/* Base page reset and background styling */
+body {
+  margin: 0;
+  padding: 40px 20px;
+  font-family: "Times New Roman", Times, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Document container to mimic the clean card frame */
+.document-card {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 650px;
+  padding: 60px 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Header typography matching the image spacing */
+h1 {
+  font-size: 28px;
+  font-weight: normal;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin: 0 0 12px 0;
+  color: #111111;
+}
+
+/* Subtitle formatting */
+.subtitle {
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #4a75a0;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+/* The subtle blue line beneath the university title */
+.subtitle::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #e2ebf3;
+  margin-top: 25px;
+}
+
+/* Main narrative paragraphs */
+p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #222222;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.intro-italic {
+  font-style: italic;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+/* Clean list implementation aligned carefully to the left */
+ol {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0 0 45px 0;
+  text-align: left;
+}
+
+ol li {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #222222;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Aligned bullet numbers matching document style */
+ol li::before {
+  content: attr(data-num) ". ";
+  font-weight: normal;
+  width: 25px;
+  flex-shrink: 0;
+}
+
+/* Logo representation at the bottom */
+.logo-container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-byu {
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+  color: #3b6594;
+  letter-spacing: 0.5px;
+  line-height: 1;
+}
+
+.logo-idaho {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #5c7fa3;
+  letter-spacing: 5px;
+  margin-top: 5px;
+  line-height: 1;
+  padding-left: 5px; /* Centers text visually against spacing */
+}
