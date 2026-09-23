@@ -1,4 +1,3 @@
-/* Base page reset and background styling */
 body {
   margin: 0;
   padding: 40px 20px;
@@ -8,7 +7,6 @@ body {
   align-items: center;
 }
 
-/* Document container to mimic the clean card frame */
 .document-card {
   background-color: #ffffff;
   width: 100%;
@@ -20,7 +18,6 @@ body {
   text-align: center;
 }
 
-/* Header typography matching the image spacing */
 h1 {
   font-size: 28px;
   font-weight: 550;
@@ -30,7 +27,6 @@ h1 {
   color: #111111;
 }
 
-/* Subtitle formatting */
 .subtitle {
   font-size: 11px;
   font-weight: bold;
@@ -41,7 +37,6 @@ h1 {
   position: relative;
 }
 
-/* The subtle blue line beneath the university title */
 .subtitle::after {
   content: "";
   display: block;
@@ -51,7 +46,6 @@ h1 {
   margin-top: 5px;
 }
 
-/* Main narrative paragraphs */
 p {
   font-size: 15px;
   line-height: 1.5;
@@ -66,7 +60,6 @@ p {
   margin-bottom: 15px;
 }
 
-/* Clean list implementation aligned carefully to the left */
 ol {
   list-style-type: none;
   padding-left: 0;
@@ -83,7 +76,6 @@ ol li {
   align-items: flex-start;
 }
 
-/* Aligned bullet numbers matching document style */
 ol li::before {
   content: attr(data-num) ". ";
   font-weight: normal;
