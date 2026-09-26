@@ -5,15 +5,39 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+
+  /* Default/light theme */
+  background-color: #f4f1ea;
+  color: #222222;
+}
+
+select {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+
+  padding: 6px 10px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  background-color: white;
+  color: #222222;
 }
 
 .document-card {
-  background-color: #ffffff;
+  position: relative;
+
   width: 100%;
   max-width: 650px;
   padding: 60px 100px;
+
+  background-color: #ffffff;
+
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
   border: 1px solid #e0e0e0;
+
   box-sizing: border-box;
   text-align: center;
 }
@@ -24,6 +48,7 @@ h1 {
   letter-spacing: 4px;
   text-transform: uppercase;
   margin: 0 0 12px 0;
+
   color: #111111;
 }
 
@@ -32,7 +57,9 @@ h1 {
   font-weight: bold;
   letter-spacing: 3px;
   text-transform: uppercase;
+
   color: #4a75a0;
+
   margin-bottom: 25px;
   position: relative;
 }
@@ -42,14 +69,18 @@ h1 {
   display: block;
   width: 100%;
   height: 1px;
+
   background-color: #e2ebf3;
+
   margin-top: 5px;
 }
 
 p {
   font-size: 15px;
   line-height: 1.5;
+
   color: #222222;
+
   text-align: left;
   margin-bottom: 20px;
 }
@@ -70,22 +101,28 @@ ol {
 ol li {
   font-size: 15px;
   line-height: 1.5;
+
   color: #222222;
+
   margin-bottom: 18px;
+
   display: flex;
   align-items: flex-start;
 }
 
 ol li::before {
   content: attr(data-num) ". ";
+
   font-weight: normal;
   width: 25px;
   flex-shrink: 0;
 }
 
-/* Logo representation at the bottom */
+/* Logo */
+
 .logo-container {
   margin-top: 40px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -94,21 +131,29 @@ ol li::before {
 
 .logo-byu {
   font-family: "Arial Black", Gadget, sans-serif;
+
   font-size: 36px;
   font-weight: 900;
+
   color: #3b6594;
+
   letter-spacing: 3px;
   line-height: 1;
+
   margin-bottom: -8px;
 }
 
 .logo-idaho {
   font-family: "Times New Roman", Times, serif;
+
   font-size: 24px;
   text-transform: uppercase;
+
   color: #5c7fa3;
+
   letter-spacing: 3px;
   line-height: 1;
+
   margin-top: -8px;
 }
 
