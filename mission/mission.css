@@ -30,7 +30,6 @@ select {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   border: 1px solid #e0e0e0;
   box-sizing: border-box;
-  text-align: center;
 }
 
 h1 {
@@ -39,7 +38,7 @@ h1 {
   letter-spacing: 4px;
   text-transform: uppercase;
   margin: 0 0 12px 0;
-
+  text-align: center;
   color: #111111;
 }
 
@@ -48,7 +47,7 @@ h1 {
   font-weight: bold;
   letter-spacing: 3px;
   text-transform: uppercase;
-
+  text-align: center;
   color: #4a75a0;
 
   margin-bottom: 25px;
@@ -76,7 +75,7 @@ p {
   margin-bottom: 20px;
 }
 
-.intro-italic {
+em {
   font-style: italic;
   margin-top: 25px;
   margin-bottom: 15px;
