@@ -26,9 +26,23 @@ nav {
   display: none;
 }
 
+/* Show the menu when the open class is added */
+nav.open {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
 nav a {
   color: white;
   text-decoration: none;
+  margin: 0.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: underline;
   margin: 0.5rem;
 }
 
@@ -61,6 +75,43 @@ main h2 {
   border: 4px solid white;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* =========================
+   Modal
+========================= */
+
+dialog {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+dialog img {
+  width: 90%;
+  max-width: 800px;
+  max-height: 80vh;
+  object-fit: contain;
+  display: block;
+  margin: 10vh auto;
+}
+
+.close-viewer {
+  position: absolute;
+  top: 5vh;
+  right: 5vw;
+  padding: 3px 6px;
+  font-size: 1.5em;
+  cursor: pointer;
 }
 
 /* =========================
@@ -100,5 +151,13 @@ footer {
 @media screen and (min-width: 1000px) {
   .gallery {
     grid-template-columns: repeat(3, 300px);
+  }
+  dialog img {
+    width: 60%;
+    margin: 10vh auto;
+  }
+
+  .close-viewer {
+    right: 10vw;
   }
 }
