@@ -1,0 +1,159 @@
+/* General page styling */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  background-color: #fff;
+  line-height: 1.5;
+}
+
+.page {
+  max-width: 900px;
+  margin: 20px auto;
+  border: 1px solid #555;
+  box-shadow: 3px 3px 0 #222;
+}
+
+.site-header {
+  border-bottom: 1px solid #e8a36e;
+}
+
+.site-header h1 {
+  margin: 0;
+  padding: 12px;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.8rem;
+  color: #493447;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+  padding: 12px 25px;
+  border-top: 1px solid #e8a36e;
+}
+
+nav a {
+  color: #b00020;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav a:focus-visible {
+  outline: 3px solid #155eef;
+  outline-offset: 4px;
+}
+
+.book-review {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 25px;
+  padding: 25px;
+}
+
+.book-details {
+  text-align: right;
+  padding-right: 20px;
+  border-right: 1px solid #e8a36e;
+  font-size: 0.9rem;
+}
+
+.book-details p {
+  margin: 0 0 8px;
+}
+
+.date {
+  font-style: italic;
+}
+
+.book-content {
+  min-width: 0;
+}
+
+.book-content h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #b00020;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.3rem;
+}
+
+.book-content img {
+  display: block;
+  width: 150px;
+  height: auto;
+  margin: 0 auto 15px;
+}
+
+.book-content p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Footer */
+
+footer {
+  padding: 10px;
+  text-align: center;
+  border-top: 1px solid #e8a36e;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Responsive design for mobile devices */
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .page {
+    margin: 10px auto;
+  }
+
+  .site-header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    gap: 20px;
+    padding: 10px 15px;
+  }
+
+  .book-review {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .book-details {
+    text-align: right;
+    padding-right: 0;
+    padding-bottom: 12px;
+    border-right: none;
+    border-bottom: 1px solid #e8a36e;
+  }
+
+  .book-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .book-content img {
+    width: 150px;
+  }
+}
