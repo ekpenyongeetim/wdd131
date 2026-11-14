@@ -1,0 +1,99 @@
+body {
+  font-family: "Palatino Linotype", sans-serif;
+  background: #f0f4f8;
+  margin: 0;
+}
+
+main {
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #313131;
+}
+
+.card {
+  background: #313131;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
+  width: 400px;
+  max-width: 100%;
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  display: block;
+  border-radius: 15px 15px 0 0;
+}
+
+.name {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+  padding: 15px 0 15px 35px;
+  background-color: #5d747b;
+}
+
+.stats {
+  margin: 10px 15px 7px 35px;
+  text-align: left;
+}
+
+.stats p {
+  margin: 10px 0;
+  color: #f0f4f8;
+}
+
+.buttons {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #5d747b;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #58605a;
+}
+
+button:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 3px;
+}
+
+button:disabled {
+  background-color: #777;
+  cursor: not-allowed;
+}
+
+#status {
+  font-style: italic;
+  color: #c9d8dc;
+}
+
+@media screen and (max-width: 450px) {
+  .card {
+    width: 100%;
+  }
+
+  .name {
+    padding-left: 20px;
+  }
+
+  .stats {
+    margin-left: 20px;
+  }
+}
