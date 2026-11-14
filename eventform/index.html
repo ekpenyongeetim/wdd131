@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Event Ticket Registration</title>
+
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="eventform.css" />
+    <script src="eventform.js" defer></script>
+  </head>
+
+  <body>
+    <main class="wrapper">
+      <h1>Event Ticket Registration</h1>
+
+      <p class="intro">
+        Register for our upcoming event by completing the form below.
+      </p>
+
+      <form id="eventForm" novalidate>
+        <div class="field">
+          <label for="firstName">First Name</label>
+          <input id="firstName" name="firstName" type="text" required />
+        </div>
+
+        <div class="field">
+          <label for="lastName">Last Name</label>
+          <input id="lastName" name="lastName" type="text" required />
+        </div>
+
+        <div class="field full">
+          <label for="email">Email Address</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+
+        <div class="field">
+          <label for="date">Event Date</label>
+          <input id="date" name="date" type="date" required />
+        </div>
+
+        <div class="field">
+          <label for="type">Registration Type</label>
+
+          <select id="type" name="type" required>
+            <option value="">Choose one</option>
+            <option value="student">Student</option>
+            <option value="guest">Guest</option>
+          </select>
+        </div>
+
+        <!-- Conditional input field -->
+
+        <div id="additionalInfo" class="field full" hidden>
+          <label id="additionalLabel" for="additionalInput">
+            Additional Information
+          </label>
+
+          <input id="additionalInput" name="additionalInput" type="text" />
+        </div>
+
+        <button class="full" type="submit">Register for Event</button>
+      </form>
+
+      <!-- Error messages -->
+
+      <section id="errors" class="errors" aria-live="polite"></section>
+
+      <!-- Successful ticket information -->
+
+      <section id="ticket" class="ticket" aria-live="polite"></section>
+    </main>
+  </body>
+</html>
