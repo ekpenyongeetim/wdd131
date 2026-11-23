@@ -56,6 +56,9 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="recipe.css" />
+
+    <!-- JavaScript -->
+    <script src="recipe.js" defer></script>
   </head>
 
   <body>
@@ -69,7 +72,7 @@
     <main>
       <!-- Search Section -->
       <section class="search">
-        <form action="#" method="get" role="search">
+        <form id="search-form" action="#" method="get" role="search">
           <label for="search-input" class="visually-hidden">
             Find a recipe
           </label>
@@ -89,39 +92,9 @@
 
       <!-- Recipe Section -->
       <section class="recipes" aria-label="Recipe collection">
-        <article class="recipe-card">
-          <img
-            class="recipe-image"
-            src="images/apple-crisp.jpg"
-            alt="A serving of homemade apple crisp topped with vanilla ice cream"
-          />
+        <p id="result-message" aria-live="polite"></p>
 
-          <div class="recipe-content">
-            <span class="category">dessert</span>
-
-            <div class="recipe-details">
-              <h2>Apple Crisp</h2>
-
-              <!-- Accessible Rating -->
-              <span
-                class="rating"
-                role="img"
-                aria-label="Rating: 4 out of 5 stars"
-              >
-                <span aria-hidden="true" class="icon-star">⭐</span>
-                <span aria-hidden="true" class="icon-star">⭐</span>
-                <span aria-hidden="true" class="icon-star">⭐</span>
-                <span aria-hidden="true" class="icon-star">⭐</span>
-                <span aria-hidden="true" class="icon-star-empty">☆</span>
-              </span>
-
-              <p class="description">
-                This apple crisp recipe is a simple yet delicious fall dessert
-                that's great served warm with vanilla ice cream.
-              </p>
-            </div>
-          </div>
-        </article>
+        <div id="recipe-container"></div>
       </section>
     </main>
 
@@ -137,7 +110,7 @@
 
       <div class="social">
         <!-- Social media icons provided under CC from
-            https://www.iconfinder.com/AlfredoCreates -->
+        https://www.iconfinder.com/AlfredoCreates -->
 
         <a href="#" aria-label="Instagram">
           <img src="images/instagram_icon.svg" alt="" />

@@ -114,8 +114,8 @@ main {
 }
 
 .recipe-image {
-  width: 220px;
-  height: 155px;
+  width: 50%;
+  height: 100%;
   object-fit: cover;
 }
 
